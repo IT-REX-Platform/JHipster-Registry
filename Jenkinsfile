@@ -14,10 +14,8 @@ pipeline {
                 }
                 steps {
                     echo 'Deploying....'
-                    dir('vserver') {
-                        sh 'docker-compose down'
-                        sh 'docker-compose up -d --build --remove-orphans'
-                    }
+                    sh 'docker-compose down'
+                    sh 'docker-compose up -d --build'
                 }
             }
         }

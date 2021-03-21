@@ -2,9 +2,7 @@ version: "2"
 services:
   jhipster-registry:
     container_name: jhipster-registry
-    image: jhipster/jhipster-registry:v6.3.0
-    volumes:
-      - ./central-server-config:/central-config
+    build: .
     # By default the JHipster Registry runs with the "dev" and "native"
     # Spring profiles.
     # "native" profile means the filesystem is used to store data, see

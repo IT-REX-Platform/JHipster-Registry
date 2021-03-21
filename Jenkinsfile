@@ -15,7 +15,7 @@ pipeline {
                 steps {
                     echo 'Deploying....'
                     sh 'docker-compose down'
-                    sh 'docker-compose up -d --build'
+                    sh 'docker-compose up -d --build --remove-orphans'
                 }
             }
         }
